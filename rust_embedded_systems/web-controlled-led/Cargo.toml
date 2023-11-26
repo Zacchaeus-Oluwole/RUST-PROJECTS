@@ -1,10 +1,10 @@
 [package]
-name = "ldr-rust-webserver-wifi"
+name = "web-controlled-led"
 version = "0.1.0"
 authors = ["Zacchaeus-Oluwole <zacchaeusoluwole@gmail.com>"]
 edition = "2021"
 resolver = "2"
-rust-version = "1.66"
+rust-version = "1.71"
 
 [profile.release]
 opt-level = "s"
@@ -14,7 +14,7 @@ debug = true    # Symbols are nice and they don't increase the size on Flash
 opt-level = "z"
 
 [features]
-default = ["std", "hal", "esp-idf-sys/native"]
+default = ["std", "embassy", "esp-idf-svc/native"]
 
 pio = ["esp-idf-sys/pio"]
 all = ["std", "nightly", "experimental", "embassy"]
