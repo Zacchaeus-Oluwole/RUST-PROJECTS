@@ -1,0 +1,19 @@
+[package]
+name = "rust_crud_api"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.70"
+axum = "0.6.17"
+axum-macros = "0.3.7"
+proc-macro2 = "1.0.66"
+serde = "1.0.160"
+serde_json = "1.0.96"
+sqlx = { version = "0.6.3", features = ["runtime-tokio-native-tls", "json", "postgres"] }
+tokio = { version = "1.28.0", features = ["full"] }
+tower-http = { version = "0.4.0", features = ["trace"] }
+tracing = "0.1.37"
+tracing-subscriber = { version = "0.3.17", features = ["env-filter"] }
